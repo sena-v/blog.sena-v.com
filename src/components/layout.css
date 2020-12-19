@@ -595,3 +595,8 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+a:link { color: #ac0202; }
+a:visited { color: #5f0c0c; }
+a:hover { color: #ff0000; }
+a:active { color: #ff8000; }

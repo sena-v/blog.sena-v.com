@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <h1>Hello, Gatsby!</h1>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <article key={node.frontmatter.slug}>
         <h2>
