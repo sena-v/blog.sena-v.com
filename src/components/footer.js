@@ -19,6 +19,7 @@ const Footer = ({ userData }) => (
         padding: `1.4rem 1.0875rem`,
         margin: `0 auto`,
         backgroundColor: `#fff0ed`,
+        textAlign: `center`,
       }}
     >
 
