@@ -47,6 +47,19 @@ module.exports = {
               linkImagesToOriginal: true,
             },
           },
+          {
+            resolve: `gatsby-remark-prismjs`,
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+          },
         ],
       },
     },

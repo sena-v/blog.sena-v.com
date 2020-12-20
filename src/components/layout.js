@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import Footer from "./footer"
+import "prismjs/themes/prism-tomorrow.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
