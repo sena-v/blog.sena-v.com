@@ -16,15 +16,29 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      // resolve: `gatsby-plugin-manifest`,
+      // options: {
+      //   name: `gatsby-starter-default`,
+      //   short_name: `starter`,
+      //   start_url: `/`,
+      //   background_color: `#8b0000`,
+      //   theme_color: `#8b0000`,
+      //   display: `minimal-ui`,
+      //   icon: `src/images/icon.png`, // This path is relative to the root of the site.
+
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#8b0000`,
-        theme_color: `#8b0000`,
-        display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 30,
+              quality: 90,
+              linkImagesToOriginal: true,
+            },
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -65,6 +79,5 @@ module.exports = {
         extensions: ["js", "jsx", "ts", "tsx"],
       }
     },
-    `gatsby-transformer-remark`,
   ],
 }
