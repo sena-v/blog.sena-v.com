@@ -11,12 +11,13 @@ const Footer = ({ userData }) => (
   >
     <div
       style={{
-        position: `absolute`,
+        // position: `absolute`,
+        position: `fixed`,
         bottom: `0`,
         left: `0`,
         width: `100%`,
         // height: `100px`,
-        padding: `1.4rem 1.0875rem`,
+        padding: `0.8rem 1.0875rem`,
         margin: `0 auto`,
         backgroundColor: `#fff0ed`,
         textAlign: `center`,
