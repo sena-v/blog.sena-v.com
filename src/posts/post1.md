@@ -1,5 +1,5 @@
 ---
-title: "JavaScriptでobjectを利用し関数を部品として使用する"
+title: "JavaScriptで関数をobject形式にして使用する"
 date: "2020-09-06"
 slug: "js-class-object"
 ---
