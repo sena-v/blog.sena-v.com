@@ -9,10 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
-import Footer from "./footer"
 import "prismjs/themes/prism-tomorrow.css"
+import "./layout.css"
+import Header from "./header"
+import Footer from "./footer"
+import Float from "./float"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,17 +29,26 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-          paddingBottom: `120px`,
-        }}
-      >
-        <main>{children}</main>
+      <div style={{
+        display: `grid`,
+        margin: `0 100px`,
+        gridTemplateColumns: `150px 1fr`,
+      }}>
+        <Float style={{
+          gridColumn: 1/2, }}/>
+        <div
+          style={{
+            //margin: `0 100px`,
+            maxWidth: 960,
+            padding: `0 1.0875rem 1.45rem`,
+            paddingBottom: `120px`,
+            gridColumn: 2/3,
+          }}
+        >
+          <main>{children}</main>
+        </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   )
 }

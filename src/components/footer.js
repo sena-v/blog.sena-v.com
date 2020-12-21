@@ -17,7 +17,7 @@ const Footer = ({ userData }) => (
         left: `0`,
         width: `100%`,
         // height: `100px`,
-        padding: `0.8rem 1.0875rem`,
+        padding: `0.2rem 1.0875rem`,
         margin: `0 auto`,
         backgroundColor: `#fff0ed`,
         textAlign: `center`,
@@ -32,9 +32,8 @@ const Footer = ({ userData }) => (
             textDecoration: `none`,
           }}
         ></Link>
-          <font size="3" color="#B1221A">Author: </font><font size="6.5" color="#B1221A"><b>{userData.userName}</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href={userData.TwitterUrl} rel="noreferrer" target="_blank">Twitter</a> / <a href={userData.GitHubUrl} rel="noreferrer" target="_blank">GitHub</a> / <a href={userData.QiitaUrl} rel="noreferrer" target="_blank">Qiita</a>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <font size="2" color="#B1221A">Author: </font><font size="4" color="#B1221A"><b>{userData.userName}</b></font>&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <font size="2">© {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a></font>
