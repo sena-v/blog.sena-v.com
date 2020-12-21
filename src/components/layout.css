@@ -399,6 +399,7 @@ p {
   padding-top: 0;
   margin-bottom: 1.45rem;
   font-Family: "Helvetica Neue";
+  text-align: left;
 }
 pre {
   margin-left: 0;
