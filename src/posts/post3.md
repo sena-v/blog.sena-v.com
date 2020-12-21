@@ -1,6 +1,32 @@
 ---
-title: "投稿3"
-date: "2020-01-03"
-slug: "post3"
+title: "Firebaseプロジェクトのデプロイ先変更を行う"
+date: "2020-09-29"
+slug: "fiorebase-deploy"
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et facilisis ligula. Morbi sed blandit elit, ac luctus tellus. Sed at libero condimentum ante vulputate blandit sed eu lectus. Curabitur quis purus fringilla, hendrerit erat ut, sagittis odio. Vivamus et rutrum odio. Proin dignissim eros a odio vestibulum pellentesque. Aenean finibus id velit blandit scelerisque. Duis tempus lorem vitae ligula placerat viverra. Fusce at posuere ligula. Phasellus nec sapien ultricies, ornare magna id, pharetra enim. Ut faucibus elementum orci id facilisis. Mauris pellentesque id lacus a volutpat. Nunc sed est id ipsum efficitur venenatis ac nec lacus.
+既存のプロジェクトと同じ構成(自分はvue)の開発を進めたい時、
+cloneしてきたプロジェクトのデプロイ先は以前設定していた箇所となっているため、
+firebase initした後firebase deployを実施してもデプロイ先は動的に変更されない。
+
+※cloneしてきたディレクトリ名やmain.js等で指定したFirebase SDK snippet等の
+　認証を勝手に読んでデプロイ先を変更してくれる等の機能はなく、デプロイ先変更コマンドとして
+　明示的に変更して上げる必要がある(SDKはあくまで認証時にのみ使用されるため)
+
+結論： firebase use (ProjectID) を使用することでデプロイ先を変更する
+
+```
+git clone https://github.com/xxxxxxxx/yyyyyyyy.git
+
+// 任意の方法で新規プロジェクト名：zzzzzzzにリネームを実施
+
+firebase use zzzzzz
+firebase deploy  // zzzzzzにデプロイが実施される
+```
+<br><br>
+実行結果
+<br><br>
+![a](../images/2020-09-29-01.png)
+
+
+注意：firebaseのデプロイ先を変更してもFirebaseSDKの設定は動的に変わらないため、
+認証等を使用する場合新しく作成したプロジェクトの情報を新しく登録する必要あり。
+(※で書いている内容の逆：Firebase機能が使えるかは別途確認すること)
