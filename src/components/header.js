@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
           maxWidth: 1000,
           padding: `0.5rem`,
           display: `inline-block`,
-          marginLeft: `250px`,
+          marginLeft: `300px`,
         }}
       >
         <p

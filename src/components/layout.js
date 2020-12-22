@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
         style={{
           display: `grid`,
           // margin: `0 100px`,
-          gridTemplateColumns: `1fr 1fr 1100px 1.5fr`,
+          gridTemplateColumns: `150px 150px 1100px 1fr`,
           // backgroundColor: `#F8FCFF`,
         }}
       >
