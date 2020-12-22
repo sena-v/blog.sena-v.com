@@ -9,19 +9,18 @@ import iconQi from '../images/qiita.png'
 const Float = ({ userData }) => (
   <div
     style={{
-    marginTop: `1rem`,
-    marginRight: `1rem`,
-    marginBottom: `1rem`,
-    marginLeft: `3rem`,
+    paddingTop: `1rem`,
+    paddingLeft: `1rem`,
     textAlign: `right`,
+    backgroundColor: `#8CA2AF30`,
     }}
   >
     <div
       style={{
         float: `left`,
         position: `fixed`,
-        width: `100px`,
-        height: `500px`,
+        // width: `100px`,
+        height: `300px`,
         padding: `1.2rem 1.0875rem`,
         margin: `0 auto`,
         textAlign: `center`,

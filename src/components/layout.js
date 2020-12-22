@@ -29,24 +29,44 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div style={{
-        display: `grid`,
-        margin: `0 100px`,
-        gridTemplateColumns: `150px 1fr`,
-      }}>
-        <Float style={{
-          gridColumn: 1/2, }}/>
+      <div
+        style={{
+          display: `grid`,
+          // margin: `0 100px`,
+          gridTemplateColumns: `1fr 1fr 1100px 1.5fr`,
+          // backgroundColor: `#F8FCFF`,
+        }}
+      >
         <div
           style={{
-            //margin: `0 100px`,
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
+            gridColumn: 1 / 2,
+            backgroundColor: `#8CA2AF30`,
+          }}
+        />
+        <Float
+          style={{
+            gridColumn: 2 / 3,
+          }}
+        />
+        <div
+          style={{
+            margin: `1.5rem 0`,
+            marginRight: `1rem`,
+            maxWidth: 1200,
+            //padding: `0 2rem `,
+            paddingLeft: `3rem`,
             paddingBottom: `120px`,
-            gridColumn: 2/3,
+            gridColumn: 2 / 3,
           }}
         >
           <main>{children}</main>
         </div>
+        <div
+          style={{
+            gridColumn: 3 / 4,
+            backgroundColor: `#8CA2AF30`,
+          }}
+        />
       </div>
       <Footer />
     </>
