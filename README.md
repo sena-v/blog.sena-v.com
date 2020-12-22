@@ -7,6 +7,11 @@ pushを感知したらオートデプロイ
 
 ### customise_blog
 リリースokの場合、PRでmasterにマージする
+ 
+## post
+記事追加用。更新前にmasterをマージする
+
+※MDはnotionで書いてpostへ配置
 
 -------------------------------
 
@@ -35,3 +40,6 @@ yarn start
 
 ## 将来的にgithub Actionsにてビルド予定
 ```
+
+graphQL
+gatsby-source-filesystem => markdown, img
