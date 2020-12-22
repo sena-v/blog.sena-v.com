@@ -5,7 +5,7 @@ import React from "react"
 const Footer = ({ userData }) => (
   <footer
     style={{
-      background: `#B1221A`,
+      background: `#CE4532`,
       marginBottom: `1.4rem`,
     }}
   >
@@ -19,7 +19,7 @@ const Footer = ({ userData }) => (
         // height: `100px`,
         padding: `0.2rem 1.0875rem`,
         margin: `0 auto`,
-        backgroundColor: `#fff0ed`,
+        backgroundColor: `#CE4532`,
         textAlign: `center`,
         fontFamily: "Helvetica Neue"
       }}
@@ -32,11 +32,11 @@ const Footer = ({ userData }) => (
             textDecoration: `none`,
           }}
         ></Link>
-          <font size="2" color="#B1221A">Author: </font><font size="4" color="#B1221A"><b>{userData.userName}</b></font>&nbsp;&nbsp;
+          <font size="2" color="#F8FCFF">Author: </font><font size="4" color="#F8FCFF"><b>{userData.userName}</b></font>&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <font size="2">© {new Date().getFullYear()}, Built with
+          <font size="2" color="#F8FCFF">© {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a></font>
+          Gatsby</font>
 
     </div>
   </footer>
