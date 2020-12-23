@@ -9,7 +9,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: hsla(0, 0%, 100%, 0.8);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -18,6 +18,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  font-family: "Helvetica";
 }
 article,
 aside,
@@ -598,7 +599,7 @@ pre tt:after {
   }
 }
 
-a:link { color: #ac0202; }
-a:visited { color: #5f0c0c; }
+a:link { color: #b4e1ff; }
+a:visited { color: #d0d4ff; }
 a:hover { color: #ff0000; }
 a:active { color: #ff8000; }

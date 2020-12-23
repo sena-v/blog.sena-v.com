@@ -12,7 +12,7 @@ const Float = ({ userData }) => (
     paddingTop: `1rem`,
     paddingLeft: `1rem`,
     textAlign: `right`,
-    backgroundColor: `#8CA2AF30`,
+    backgroundColor: `#2F2D32`,
     }}
   >
     <div
