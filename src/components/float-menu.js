@@ -8,7 +8,7 @@ const FloatMenu = ({ userData }) => (
       paddingTop: `1rem`,
       textAlign: `right`,
       backgroundColor: `#2F2D32`,
-      paddingLeft: `30px`
+      //paddingLeft: `30px`
     }}
   >
     <div
@@ -67,7 +67,7 @@ const FloatMenu = ({ userData }) => (
         <a
           class="twitter-timeline"
           data-lang="ja"
-          data-width="400px"
+          data-width="350px"
           data-height="500px"
           data-dnt="true"
           data-theme="dark"
