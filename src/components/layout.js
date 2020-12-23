@@ -14,6 +14,7 @@ import "./layout.css"
 import Header from "./header"
 import Footer from "./footer"
 import Float from "./float"
+import FloatMenu from "./float-menu"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,24 +30,35 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div style={{
-        display: `grid`,
-        margin: `0 100px`,
-        gridTemplateColumns: `150px 1fr`,
-      }}>
-        <Float style={{
-          gridColumn: 1/2, }}/>
+      <div
+        style={{
+          display: `grid`,
+          // margin: `0 100px`,
+          gridTemplateColumns: `100px 100px 1100px 1fr`,
+        }}
+      >
         <div
           style={{
-            //margin: `0 100px`,
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
+            gridColumn: 1 / 2,
+            backgroundColor: `#2F2D32`,
+          }}
+        />
+        <Float style={{ gridColumn: 2 / 3 }} />
+        <div
+          style={{
+            maxWidth: 1200,
+            paddingTop: `2rem `,
             paddingBottom: `120px`,
-            gridColumn: 2/3,
+            paddingRight: `2rem`,
+            paddingLeft: `3rem`,
+
+            gridColumn: 2 / 3,
+            backgroundColor: `#2F2D32`,
           }}
         >
           <main>{children}</main>
         </div>
+        <FloatMenu style={{ gridColumn: 3 / 4 }} />
       </div>
       <Footer />
     </>
