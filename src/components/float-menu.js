@@ -6,9 +6,9 @@ const FloatMenu = ({ userData }) => (
   <div
     style={{
       paddingTop: `1rem`,
-      paddingLeft: `1rem`,
       textAlign: `right`,
-      backgroundColor: `#8CA2AF30`,
+      backgroundColor: `#2F2D32`,
+      paddingLeft: `30px`
     }}
   >
     <div
@@ -25,7 +25,7 @@ const FloatMenu = ({ userData }) => (
         borderRadius: `15px`,
       }}
     >
-      <div
+      {/* <div
         style={{
           floatMenu: `left`,
           position: `fixed`,
@@ -35,7 +35,6 @@ const FloatMenu = ({ userData }) => (
           margin: `0 auto`,
           textAlign: `left`,
           fontFamily: "Helvetica Neue",
-          // backgroundColor: `#F8FCFF`,
           borderRadius: `15px`,
         }}
       >
@@ -58,7 +57,7 @@ const FloatMenu = ({ userData }) => (
           c
         </a>
         <br />
-      </div>
+      </div> */}
       <br />
       <div
         style={{

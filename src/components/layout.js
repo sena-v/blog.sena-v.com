@@ -35,25 +35,25 @@ const Layout = ({ children }) => {
           display: `grid`,
           // margin: `0 100px`,
           gridTemplateColumns: `100px 100px 1100px 1fr`,
-          // backgroundColor: `#F8FCFF`,
         }}
       >
         <div
           style={{
             gridColumn: 1 / 2,
-            backgroundColor: `#8CA2AF30`,
+            backgroundColor: `#2F2D32`,
           }}
         />
         <Float style={{ gridColumn: 2 / 3 }} />
         <div
           style={{
-            margin: `1.5rem 0`,
-            marginRight: `2rem`,
             maxWidth: 1200,
-            //padding: `0 2rem `,
-            paddingLeft: `3rem`,
+            paddingTop: `2rem `,
             paddingBottom: `120px`,
+            paddingRight: `2rem`,
+            paddingLeft: `3rem`,
+
             gridColumn: 2 / 3,
+            backgroundColor: `#2F2D32`,
           }}
         >
           <main>{children}</main>
