@@ -11,7 +11,7 @@ React内の各ツールとVueの現状を比較しながらReactをやる方向�
 
 # React
 
-![](../images/2020-12-01-01.png)![](../images/2020-12-01-02.jpg)<br>
+![](../images/posts-image/2020-12-01-01.png)![](../images/posts-image/2020-12-01-02.jpg)<br>
 
 Vueと比べてJavaScriptがメインの開発であるため、初学者が取り組む場合JavaScript学習から始める必要がある。<br>
 (非同期、イベント駆動、基本的なESバージョン差の吸収ができないと厳しいかも)<br>
@@ -42,8 +42,8 @@ CRAは機能を後で導入したくなった場合カスタマイズが面倒�
 
 # Vue.js
 
-![](../images/2020-12-01-03.png)
-![](../images/2020-12-01-04.jpg)<br>
+![](../images/posts-image/2020-12-01-03.png)
+![](../images/posts-image/2020-12-01-04.jpg)<br>
 
 Reactと比べて単一コンポーネントにhtml/css/JavaScriptが纏まっている。<br>
 そのため機能が分割されておりシンプルなコードにしやすく理解が楽になる。
