@@ -1,6 +1,7 @@
 ---
 title: "Firebaseプロジェクトのデプロイ先変更を行う"
 date: "2020-09-29"
+tags: ["Firebase"]
 slug: "fiorebase-deploy"
 ---
 既存のプロジェクトと同じ構成(自分はvue)の開発を進めたい時、

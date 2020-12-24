@@ -1,6 +1,7 @@
 ---
 title: "個人開発のマネタイズを見据えた開発方針"
 date: "2020-09-27"
+tags: ["個人開発"]
 slug: "manetisemypersonalproject"
 ---
 

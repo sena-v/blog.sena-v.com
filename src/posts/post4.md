@@ -1,6 +1,7 @@
 ---
 title: "[JavaScript]なろうランキングをAPIで一括取得する"
 date: "2020-11-19"
+tags: ["JavaScript",]
 slug: "narou-rank-get"
 ---
 APIが使える環境があり、定期的にそれを使っているならちょっとコード化するだけで<br>
