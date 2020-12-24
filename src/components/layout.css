@@ -259,7 +259,7 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -599,7 +599,12 @@ pre tt:after {
   }
 }
 
-a:link { color: #b4e1ff; }
-a:visited { color: #d0d4ff; }
-a:hover { color: #ff0000; }
-a:active { color: #ff8000; }
+a:link { color: #66c2ff; text-decoration:none; }
+a:visited { color: #d0d4ff; text-decoration:none; }
+a:hover { color: #ff0000; text-decoration:none; }
+a:active { color: #ff8000; text-decoration:none; }
+
+a.tag:link { color: #0D47A1; text-decoration:none; }
+a.tag:visited { color: #0D47A1; text-decoration:none; }
+a.tag:hover { color: #ff0000; text-decoration:none; }
+a.tag:active { color: #0D47A1; text-decoration:none; }

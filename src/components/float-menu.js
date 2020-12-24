@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -65,7 +65,7 @@ const FloatMenu = ({ userData }) => (
         }}
       >
         <a
-          class="twitter-timeline"
+          className="twitter-timeline"
           data-lang="ja"
           data-width="350px"
           data-height="500px"
@@ -92,6 +92,24 @@ FloatMenu.defaultProps = {
     QiitaUrl: `https://qiita.com/sena_v`,
   },
 }
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date(formatString: "YYYY年MM月DD日")
+            tags
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
 
 export default FloatMenu
 

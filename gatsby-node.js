@@ -11,6 +11,7 @@ exports.createPages = async gatsbyNodeHelpers => {
           node {
             frontmatter {
               slug
+              tags
             }
           }
         }

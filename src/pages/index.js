@@ -3,6 +3,27 @@ import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 
+const createTags = tags => {
+  return tags.map(tag => (
+    <ul key={tag}
+      style={{
+        marginLeft: `0px`,
+        marginBottom: `10px`,
+        marginRight: `10px`,
+        display: `inline-block`,
+        backgroundColor: `#b4e1ff`,
+        paddingLeft: `5px`,
+        paddingRight: `5px`,
+        borderRadius: `5px`,
+      }}
+    >
+      <Link key={tag} to={`/tag/${tag}`} className="tag">
+        {tag}
+      </Link>
+    </ul>
+  ))
+}
+
 const IndexPage = ({ data }) => (
   <Layout>
     {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -12,6 +33,9 @@ const IndexPage = ({ data }) => (
             {node.frontmatter.title}
           </Link>
         </h2>
+        <div>
+        {createTags(node.frontmatter.tags)}
+        </div>
         <time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time>
         <p>{node.excerpt}</p>
       </article>
@@ -27,6 +51,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "YYYY年MM月DD日")
+            tags
             slug
           }
           excerpt
