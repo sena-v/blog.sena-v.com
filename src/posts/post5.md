@@ -1,6 +1,7 @@
 ---
 title: "2020年最新技術とそれに関する知見"
 date: "2020-11-27"
+tags: ["技術"]
 slug: "2020-tech-trend"
 ---
 
@@ -12,7 +13,7 @@ slug: "2020-tech-trend"
 
 # Flutter
 
-![](../images/2020-11-27-01.png)
+![](../images/posts-image/2020-11-27-01.png)
 
 Qiita投稿記事　**103**件<br>
 <br>
@@ -37,7 +38,7 @@ iOS/Android開発に対応できる<u>React Nativeと比べて以下の問題が
 * 採用する案件があったら飛びついて中で勉強させてもらうのはめちゃくちゃ有意義だと思う
 
 # Glide
-![](../images/2020-11-27-02.png)
+![](../images/posts-image/2020-11-27-02.png)
 
 Qiita投稿記事　**6**件<br>
 <br>
@@ -68,7 +69,7 @@ GOの流行感からフロントエンドをやっていこうとすれば避け
 ※以下、Vueはハンズオン程度の知識、Reactは調査レベルの知識前提になります<br>
 
 ## Vue.js
-![](../images/2020-11-27-03.png)
+![](../images/posts-image/2020-11-27-03.png)
 
 Vueはcomponent単位でhtml/JavaScript/CSSが一つになった.vueファイルが作られ、<br>
 1ページ1ページの処理・コンテンツをまとめて管理できるので開発者が少ない環境であれば<br>
@@ -94,7 +95,7 @@ Nuxt(大規模には向いてるが設定が増える)とかVuetify(途中導入
 * 触った感として<u>バージョン差異は少し大変だけど全体的にシームレスな開発の楽さが大きかった</u>。
 
 ## React
-![](../images/2020-11-27-04.png)
+![](../images/posts-image/2020-11-27-04.png)
 
 FaceBook等大手が使っているフロントエンドフレームワーク。<br>
 .vueのような形ではなくJSX記法を用いてJavaScriptでhtmlを出力していく方式。<br>
@@ -119,7 +120,7 @@ ReactにもReact NativeやNext等のフレームワークがあるため現場�
 * これからはTypeScript前提になってくるかも
 
 # Docker
-![](../images/2020-11-27-05.png)
+![](../images/posts-image/2020-11-27-05.png)
 
 Qiita投稿記事　**675**件
 
@@ -146,7 +147,7 @@ Dockerについては使ってる企業と使ってない企業では年収100�
 
 # GraphQL
 
-![](../images/2020-11-27-06.png)
+![](../images/posts-image/2020-11-27-06.png)
 
 Qiita投稿記事　**46**件<br>
 <br>
@@ -174,7 +175,7 @@ GraphQLはエンドポイントを一つにし、飛んできたリクエスト�
 
 # Electron
 
-![](../images/2020-11-27-07.png)
+![](../images/posts-image/2020-11-27-07.png)
 
 Qiita投稿記事　**33**件
 

@@ -1,6 +1,7 @@
 ---
 title: "Firebaseプロジェクトのデプロイ先変更を行う"
 date: "2020-09-29"
+tags: ["Firebase"]
 slug: "fiorebase-deploy"
 ---
 既存のプロジェクトと同じ構成(自分はvue)の開発を進めたい時、
@@ -24,7 +25,7 @@ firebase deploy  // zzzzzzにデプロイが実施される
 <br><br>
 実行結果
 <br><br>
-![a](../images/2020-09-29-01.png)
+![a](../images/posts-image/2020-09-29-01.png)
 
 
 注意：firebaseのデプロイ先を変更してもFirebaseSDKの設定は動的に変わらないため、

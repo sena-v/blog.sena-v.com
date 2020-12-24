@@ -1,6 +1,7 @@
 ---
 title: "JavaScriptで関数をobject形式にして使用する"
 date: "2020-09-06"
+tags: ["JavaScript"]
 slug: "js-class-object"
 ---
 JavaScriptで複数のモジュールを組み合わせて使用しており、設計上の理由で変数を特定のモジュールに入れないといけないが、メインモジュールからそのモジュールを参照すると変数がクロージャのためundefinedになってしまう。
