@@ -41,6 +41,7 @@ const IndexPage = ({ data }) => (
   </Layout>
 )
 
+/* window.locationが転けるので一時アウト
 const queryString = `
   query {
     allMarkdownRemark(
@@ -64,6 +65,24 @@ const queryString = `
     }
   }
 `
-export const query = graphql + queryString
+export const query = graphql + queryString */
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date(formatString: "YYYY年MM月DD日")
+            tags
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

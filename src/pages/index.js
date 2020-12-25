@@ -19,7 +19,7 @@ const createTags = tags => {
       }}
       className="tag"
     >
-      <Link key={tag} to={"/tag?" + tag} className="tag">
+      <Link key={tag} to={"/tag?"+tag} className="tag">
         {tag}
       </Link>
     </ul>
@@ -31,9 +31,13 @@ const IndexPage = ({ data }) => (
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <article key={node.frontmatter.slug}>
         <h2>
-          <Link to={`/${node.frontmatter.slug}`}>{node.frontmatter.title}</Link>
+          <Link to={`/${node.frontmatter.slug}`}>
+            {node.frontmatter.title}
+          </Link>
         </h2>
-        <div>{createTags(node.frontmatter.tags)}</div>
+        <div>
+        {createTags(node.frontmatter.tags)}
+        </div>
         <time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time>
         <p>{node.excerpt}</p>
       </article>
@@ -41,15 +45,9 @@ const IndexPage = ({ data }) => (
   </Layout>
 )
 
-const queryString = `
+export const query = graphql`
   query {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC },
-      filter: { frontmatter: { tags: { eq: "${window.location.search.replace(
-        "?",
-        ""
-      )}" } } }
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           frontmatter {
@@ -64,6 +62,5 @@ const queryString = `
     }
   }
 `
-export const query = graphql + queryString
 
 export default IndexPage
