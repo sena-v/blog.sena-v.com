@@ -21,8 +21,8 @@ const Float = ({ userData }) => (
         position: `fixed`,
         // width: `100px`,
         height: `300px`,
-        padding: `1.2rem 1.0875rem`,
-        margin: `0 auto`,
+        // padding: `1.2rem 1.0875rem`,
+        margin: `1.5rem`,
         textAlign: `center`,
         fontFamily: "Helvetica Neue",
       }}
@@ -34,17 +34,23 @@ const Float = ({ userData }) => (
           textDecoration: `none`,
         }}
       ></Link>
+      <div className='imgDiv'>
       <a href={userData.TwitterUrl} rel="noreferrer" target="_blank">
         <img src={iconTw} alt='画像' width="30px" height="30px"/>
       </a>
+      </div>
       <br />
+      <div className='imgDiv'>
       <a href={userData.GitHubUrl} rel="noreferrer" target="_blank">
         <img src={iconGi} alt='画像' width="30px" height="30px"/>
       </a>
+      </div>
       <br />
+      <div className='imgDiv'>
       <a href={userData.QiitaUrl} rel="noreferrer" target="_blank">
         <img src={iconQi} alt='画像' width="30px" height="30px"/>
       </a>
+      </div>
       <br />
     </div>
   </div>
