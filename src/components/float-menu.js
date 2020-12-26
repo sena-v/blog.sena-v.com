@@ -2,6 +2,8 @@
 import PropTypes from "prop-types"
 import React from "react"
 
+// TOPディレクトリの時だけTwitterを表示する？
+
 const FloatMenu = ({ userData }) => (
   <div
     style={{
@@ -14,7 +16,7 @@ const FloatMenu = ({ userData }) => (
     <div
       style={{
         floatMenu: `left`,
-        position: `fixed`,
+        // position: `fixed`,
         // width: `240px`,
         // height: `500px`,
         padding: `0.1rem`,
@@ -61,7 +63,7 @@ const FloatMenu = ({ userData }) => (
       <br />
       <div
         style={{
-          marginTop: `150px`,
+          marginTop: `300px`,
         }}
       >
         <a
@@ -73,7 +75,6 @@ const FloatMenu = ({ userData }) => (
           data-theme="dark"
           href="https://twitter.com/card1nal_tetra?ref_src=twsrc%5Etfw"
         >
-          Tweets by card1nal_tetra
         </a>
       </div>
     </div>
