@@ -20,6 +20,8 @@ const Header = ({ siteTitle }) => (
         //padding: `0.5rem`,
         backgroundImage: `url(${back})`,
         backgroundSize: `cover`,
+        backgroundColor: `#02031b`,
+        // animation: `bgAnime 20s infinite`
       }}
     >
       <p
