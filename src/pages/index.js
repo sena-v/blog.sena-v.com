@@ -19,7 +19,7 @@ const createTags = tags => {
       }}
       className="tag"
     >
-      <Link key={tag} to={"/tag?"+tag} className="tag">
+      <Link key={tag} to={"/tags/"+tag} className="tag">
         {tag}
       </Link>
     </ul>

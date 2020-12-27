@@ -1,116 +1,148 @@
-// import { Link } from "gatsby"
+import { useStaticQuery, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
 // TOPディレクトリの時だけTwitterを表示する？
 
-const FloatMenu = ({ userData }) => (
-  <div
-    style={{
-      paddingTop: `1rem`,
-      textAlign: `right`,
-      backgroundColor: `#2F2D32`,
-      //paddingLeft: `30px`
-    }}
-  >
+const createTags = data => {
+  return (
+    <ul
+      key={data.tag}
+      style={{
+        marginLeft: `0px`,
+        marginBottom: `10px`,
+        marginRight: `10px`,
+        display: `inline-block`,
+        backgroundColor: `#98e1ff`,
+        paddingLeft: `5px`,
+        paddingRight: `5px`,
+        borderRadius: `5px`,
+      }}
+      className="tag"
+    >
+      <Link key={data.tag} to={"/tags/" + data.tag} className="tag">
+        {data.tag}<font style={{fontSize: `9px`}}>({data.totalCount})</font>
+      </Link>
+    </ul>
+  )
+}
+
+const FloatMenu = () => {
+  const data = useStaticQuery(
+    graphql`
+    query {
+      allMarkdownRemark(limit: 1000) {
+        group(field: frontmatter___tags) {
+          tag: fieldValue
+          totalCount
+        }
+      }
+    }
+  `
+  )
+
+  return (
     <div
       style={{
-        floatMenu: `left`,
-        // position: `fixed`,
-        // width: `240px`,
-        // height: `500px`,
-        padding: `0.1rem`,
-        margin: `0 auto`,
-        textAlign: `center`,
-        fontFamily: "Helvetica Neue",
-        // background: `#CE4532`,
-        borderRadius: `15px`,
+        paddingTop: `1rem`,
+        textAlign: `right`,
+        backgroundColor: `#2F2D32`,
+        //paddingLeft: `30px`
       }}
     >
-      {/* <div
-        style={{
-          floatMenu: `left`,
-          position: `fixed`,
-          width: `400px`,
-          height: `150px`,
-          padding: `1rem`,
-          margin: `0 auto`,
-          textAlign: `left`,
-          fontFamily: "Helvetica Neue",
-          borderRadius: `15px`,
-        }}
-      >
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        ></Link>
-        <a href={userData.TwitterUrl} rel="noreferrer" target="_blank">
-          a
-        </a>
-        <br />
-        <a href={userData.GitHubUrl} rel="noreferrer" target="_blank">
-          b
-        </a>
-        <br />
-        <a href={userData.QiitaUrl} rel="noreferrer" target="_blank">
-          c
-        </a>
-        <br />
-      </div> */}
-      <br />
       <div
         style={{
-          marginTop: `300px`,
+          floatMenu: `left`,
+          // position: `fixed`,
+          // width: `240px`,
+          // height: `500px`,
+          padding: `0.1rem`,
+          margin: `0 auto`,
+          textAlign: `center`,
+          fontFamily: "Helvetica Neue",
+          // background: `#CE4532`,
+          borderRadius: `15px`,
+          width: `400px`,
         }}
       >
-        <a
-          className="twitter-timeline"
-          data-lang="ja"
-          data-width="350px"
-          data-height="500px"
-          data-dnt="true"
-          data-theme="dark"
-          href="https://twitter.com/card1nal_tetra?ref_src=twsrc%5Etfw"
+        <div
+          style={{
+            width: `400px`,
+            // padding: `1rem`,
+            margin: `0 auto`,
+            textAlign: `left`,
+            fontFamily: "Helvetica Neue",
+            borderRadius: `15px`,
+            marginRight: `20px,`
+          }}
         >
-        </a>
+          <p
+            style={{
+              // paddingLeft: `30%`,
+              textAlign: `center`,
+              marginBottom: `20px`,
+              width: `320px`,
+              borderTop: `none`,
+              borderLeft: `none`,
+              borderRight: `none`,
+              borderBottom: `3px double`,
+              fontWeight: `bold`,
+              borderColor: `rgb(47, 45, 50) rgb(47, 45, 50) #ffffff rgb(47, 45, 50)`,
+            }}
+          >
+            Tags
+          </p>
+          <div style={{ width: `320px`}}>
+          {console.log(data)}
+          {data.allMarkdownRemark.group.map(node => createTags(node))}
+          </div>
+          <p
+            style={{
+              paddingTop: `10px`,
+              textAlign: `center`,
+              marginBottom: `20px`,
+              width: `320px`,
+              borderTop: `none`,
+              borderLeft: `none`,
+              borderRight: `none`,
+              borderBottom: `3px double`,
+              fontWeight: `bold`,
+              borderColor: `rgb(47, 45, 50) rgb(47, 45, 50) #ffffff rgb(47, 45, 50)`,
+            }}
+          >
+          </p>
+          <br />
+        </div>
+
+        <div
+          style={{
+            textAlign: `left`,
+          }}
+        >
+          <a
+            className="twitter-timeline"
+            data-lang="ja"
+            data-width="330px"
+            data-height="600px"
+            data-dnt="true"
+            data-theme="dark"
+            href="https://twitter.com/card1nal_tetra?ref_src=twsrc%5Etfw"
+          >
+            &nbsp;
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 FloatMenu.propTypes = {
   siteTitle: PropTypes.string,
 }
 
 FloatMenu.defaultProps = {
-  userData: {
-    userName: `sena-v`,
-    TwitterUrl: `https://twitter.com/card1nal_tetra`,
-    GitHubUrl: `https://github.com/sena-v`,
-    QiitaUrl: `https://qiita.com/sena_v`,
-  },
+  //emunで入れたいものがあれば使用
 }
-
-export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date(formatString: "YYYY年MM月DD日")
-            tags
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
 
 export default FloatMenu
 
