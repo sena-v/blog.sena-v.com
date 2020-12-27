@@ -62,12 +62,12 @@ const FloatMenu = () => {
           fontFamily: "Helvetica Neue",
           // background: `#CE4532`,
           borderRadius: `15px`,
-          width: `400px`,
+          width: `330px`,
         }}
       >
         <div
           style={{
-            width: `400px`,
+            width: `330px`,
             // padding: `1rem`,
             margin: `0 auto`,
             textAlign: `left`,
@@ -93,7 +93,6 @@ const FloatMenu = () => {
             Tags
           </p>
           <div style={{ width: `320px`}}>
-          {console.log(data)}
           {data.allMarkdownRemark.group.map(node => createTags(node))}
           </div>
           <p
