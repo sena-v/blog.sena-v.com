@@ -93,7 +93,6 @@ const FloatMenu = () => {
             Tags
           </p>
           <div style={{ width: `320px`}}>
-          {console.log(data)}
           {data.allMarkdownRemark.group.map(node => createTags(node))}
           </div>
           <p
