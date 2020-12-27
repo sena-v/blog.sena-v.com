@@ -4,7 +4,12 @@ date: "2020-12-27"
 tags: ["JavaScript","React","GraphQL"]
 slug: "gatsby-graphql"
 ---
-<br><br>
+
+<br>
+
+![a](../images/posts-image/2020-12-27.png)
+
+<br>
 GatsbyにおけるGraphQLの挙動について、公式チュートリアル・参考サイトで得られる情報は<br>
 順番に学習することを想定しているため、ピンポイントでの理解が難しくなっている。<br>
 <br>
