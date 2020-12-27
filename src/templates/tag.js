@@ -19,7 +19,7 @@ const createTags = tags => {
       }}
       className="tag"
     >
-      <Link key={tag} to={"/tag?" + tag} className="tag">
+      <Link key={tag} to={"/tags/" + tag} className="tag">
         {tag}
       </Link>
     </ul>
@@ -41,48 +41,25 @@ const IndexPage = ({ data }) => (
   </Layout>
 )
 
-/* window.locationが転けるので一時アウト
-const queryString = `
-  query {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC },
-      filter: { frontmatter: { tags: { eq: "${window.location.search.replace(
-        "?",
-        ""
-      )}" } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date(formatString: "YYYY年MM月DD日")
-            tags
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
-export const query = graphql + queryString */
-
+// window.locationが転けるので一時アウト←不可のため他方法が必要
 export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date(formatString: "YYYY年MM月DD日")
-            tags
-            slug
-          }
-          excerpt
+query MyQuery($tag: String) {
+  allMarkdownRemark(filter: {frontmatter: {tags: { eq: $tag }}} ,
+  sort: { fields: [frontmatter___date], order: DESC }) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date(formatString: "YYYY年MM月DD日")
+          slug
+          tags
         }
+        excerpt
+        html
       }
     }
   }
+}
 `
 
 export default IndexPage
