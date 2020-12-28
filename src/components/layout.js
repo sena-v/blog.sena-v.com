@@ -30,6 +30,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <title style={{ display: `none` }} >{data.site.siteMetadata?.title}</title>
       <div
         style={{
           display: `grid`,
