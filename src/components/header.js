@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import back from '../images/titleback.png'
+import back from '../images/titleback.jpg'
 
 const Header = ({ siteTitle }) => (
   <header
