@@ -21,23 +21,27 @@ const Footer = ({ userData }) => (
         margin: `0 auto`,
         backgroundColor: `#2F2D32`,
         textAlign: `center`,
-        fontFamily: "Helvetica Neue"
+        fontFamily: "Helvetica Neue",
       }}
     >
-
+      <font size="2">Author: </font>
+      <font size="4">
         <Link
-          to="/"
+          to="/about"
           style={{
             color: `white`,
             textDecoration: `none`,
           }}
-        ></Link>
-          <font size="2">Author: </font><font size="4"><b>{userData.userName}</b></font>&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <font size="2">© {new Date().getFullYear()}, Built with
-          {` `}
-          Gatsby</font>
-
+        >
+          <b>{userData.userName}</b>
+        </Link>
+      </font>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+      <font size="2">
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        Gatsby
+      </font>
     </div>
   </footer>
 )

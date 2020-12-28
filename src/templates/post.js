@@ -31,6 +31,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
+        <title style={{ display: `none` }} >{post.frontmatter.title}</title>
         <h1>{post.frontmatter.title}</h1>
         <h4 style={{ marginLeft: `20px` }}>{createTags(post.frontmatter.tags)}</h4>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
