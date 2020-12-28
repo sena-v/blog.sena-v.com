@@ -6,7 +6,7 @@ import styles from './layout.css';
 
 
 const Tag = ({ tag }) => (
-  <Link className={styles.link} to={`/tags/${kebabCase(tag)}/`}>
+  <Link className={styles.link} to={`/tags/${kebabCase(tag)}/`} aria-label={kebabCase(tag)}>
     <li className={styles.tag}>{tag}</li>
   </Link>
 );
