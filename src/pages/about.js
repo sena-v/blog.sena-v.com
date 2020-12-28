@@ -111,6 +111,7 @@ const AboutPage = () => (
         data-netlify="true"
         style={{ padding: `30px`, marginBottom: `0px` }}
       >
+        <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>
             Name: <input type="text" name="name" />
