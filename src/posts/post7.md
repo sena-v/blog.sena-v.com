@@ -5,8 +5,6 @@ tags: ["JavaScript","React","GraphQL"]
 slug: "gatsby-graphql"
 ---
 
-<br>
-
 ![a](../images/posts-image/2020-12-27.png)
 
 <br>
