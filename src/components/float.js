@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import iconTw from '../images/twitter.png'
@@ -27,27 +26,20 @@ const Float = ({ userData }) => (
         fontFamily: "Helvetica Neue",
       }}
     >
-      <Link
-        to="/"
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-        }}
-      ></Link>
       <div className='imgDiv'>
-      <a href={userData.TwitterUrl} rel="noreferrer" target="_blank">
+      <a href={userData.TwitterUrl} rel="noreferrer" target="_blank" aria-label="twitter">
         <img src={iconTw} alt='画像' width="30px" height="30px"/>
       </a>
       </div>
       <br />
       <div className='imgDiv'>
-      <a href={userData.GitHubUrl} rel="noreferrer" target="_blank">
+      <a href={userData.GitHubUrl} rel="noreferrer" target="_blank" aria-label="gitHub">
         <img src={iconGi} alt='画像' width="30px" height="30px"/>
       </a>
       </div>
       <br />
       <div className='imgDiv'>
-      <a href={userData.QiitaUrl} rel="noreferrer" target="_blank">
+      <a href={userData.QiitaUrl} rel="noreferrer" target="_blank" aria-label="Qiita">
         <img src={iconQi} alt='画像' width="30px" height="30px"/>
       </a>
       </div>

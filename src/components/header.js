@@ -41,6 +41,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
             fontSize: `70px`
           }}
+          aria-label={siteTitle}
         >
           <b>{siteTitle}</b>
         </Link>

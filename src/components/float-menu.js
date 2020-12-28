@@ -20,7 +20,7 @@ const createTags = data => {
       }}
       className="tag"
     >
-      <Link key={data.tag} to={"/tags/" + data.tag} className="tag">
+      <Link key={data.tag} to={"/tags/" + data.tag} className="tag" aria-label={data.tag}>
         {data.tag}<font style={{fontSize: `9px`}}>({data.totalCount})</font>
       </Link>
     </ul>

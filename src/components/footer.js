@@ -32,6 +32,7 @@ const Footer = ({ userData }) => (
             color: `white`,
             textDecoration: `none`,
           }}
+          aria-label="about"
         >
           <b>{userData.userName}</b>
         </Link>

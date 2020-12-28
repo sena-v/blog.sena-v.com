@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Helmet from "react-helmet"
 
 import Layout from "../components/layout"
 
@@ -19,7 +20,7 @@ const createTags = tags => {
       }}
       className="tag"
     >
-      <Link key={tag} to={"/tags/"+tag} className="tag">
+      <Link key={tag} to={"/tags/" + tag} className="tag">
         {tag}
       </Link>
     </ul>
@@ -28,16 +29,22 @@ const createTags = tags => {
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <Helmet>
+      <meta name="description" content="sena-v.com" />
+      <html lang="ja" />
+    </Helmet>
+    <title>sena-v.com</title>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <article key={node.frontmatter.slug}>
         <h2>
-          <Link to={`/${node.frontmatter.slug}`}>
+          <Link
+            to={`/${node.frontmatter.slug}`}
+            aria-label={node.frontmatter.title}
+          >
             {node.frontmatter.title}
           </Link>
         </h2>
-        <div>
-        {createTags(node.frontmatter.tags)}
-        </div>
+        <div>{createTags(node.frontmatter.tags)}</div>
         <time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time>
         <p>{node.excerpt}</p>
       </article>
