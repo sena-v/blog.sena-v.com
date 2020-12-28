@@ -94,5 +94,11 @@ module.exports = {
         extensions: ["js", "jsx", "ts", "tsx"],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-5515095500922112`,
+      },
+    },
   ],
 }
