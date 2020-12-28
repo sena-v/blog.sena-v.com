@@ -30,10 +30,10 @@ const createTags = tags => {
 const IndexPage = ({ data }) => (
   <Layout>
     <Helmet>
+      <title>sena-v.com</title>
       <meta name="description" content="sena-v.com" />
       <html lang="ja" />
     </Helmet>
-    <title>sena-v.com</title>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <article key={node.frontmatter.slug}>
         <h2>
