@@ -1,5 +1,5 @@
 ---
-title: "【逆引き】GatsbyにおけるGraphQLの役割について"
+title: "GatsbyにおけるGraphQLの役割について"
 date: "2020-12-27"
 tags: ["JavaScript","React","GraphQL"]
 slug: "gatsby-graphql"
@@ -16,7 +16,7 @@ GatsbyにおけるGraphQLの使用方法をまとめる。
 <br><br>
 
 # GraphQL挙動の前提
-基本的には各コンポーネントを構成する.jsファイル内で定義をすることで、Gatsbyの黒魔術で結果が返却される。<br>
+基本的には各コンポーネントを構成する.jsファイル内で定義をすることで、内部処理が行われ<br>Gatsbyの黒魔術で結果が返却される。<br><br>
 おおまかな流れとしては以下になる。<br>
 <br>
 JSXを生成するコンポーネントを読み込む<br>
@@ -63,7 +63,7 @@ queryをexportして読み込んだgraphQLモジュールに投げる<br>
 <br><br>
 
 ## Topページ等の主ページコンポーネントで情報を取得する場合
-* 主コンポーネントでqueryを定義してexportする事により、graphQLモジュールが吸い上げdataオブジェクトを返却する<br>
+* 主コンポーネントでqueryを定義してexportする事により、graphQLモジュールが吸い上げて処理し<br>dataオブジェクトを返却する
 * queryの定義自体は特に指定箇所は無いが、できるだけ視認性を良くするため間に挟まないようにする<br>
 
 1個のオブジェクトを生成するクエリを発行 data: allMarkdownRemark{ obj }
@@ -90,7 +90,7 @@ export const query = graphql`
 ```
 <br><br>
 
-## コンポーネントに読み込んだ子コンポーネント内で情報を取得する場合
+## コンポーネントに読み込んだ子の内側で情報を取得する場合
 * 子コンポーネント内でuseStaticQueryを使用する<br>
 * exportしているメソッド内でJSXをreturnする形に変更し、return前にqueryを記述する<br>
 
@@ -117,7 +117,7 @@ export const query = graphql`
 <br><br>
 
 # 未検証
-## 親コンポーネントから子コンポーネントへ渡せなくはないと思うが…
+## 親から子コンポーネントへ渡せなくはないと思うが…
 子要素の中でgraphQLの結果を使用したい場合、子要素内でクエリ発行を行う方法(useStaticQuery)と<br>
 親コンポーネントで生成したqueryから取得したObjectを子要素に渡す方法が考えられる<br>
 <br>

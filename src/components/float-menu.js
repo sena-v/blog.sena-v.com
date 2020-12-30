@@ -47,7 +47,8 @@ const FloatMenu = () => {
         paddingTop: `1rem`,
         textAlign: `right`,
         backgroundColor: `#2F2D32`,
-        //paddingLeft: `30px`
+        paddingLeft: `40px`,
+        paddingRight: `600px`,
       }}
     >
       <div
