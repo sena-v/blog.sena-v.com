@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
         style={{
           display: `grid`,
           // margin: `0 100px`,
-          gridTemplateColumns: `100px 85px 1100px 1fr`,
+          gridTemplateColumns: `150px 85px 980px 1fr`,
         }}
       >
         <div
