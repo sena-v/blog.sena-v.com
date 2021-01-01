@@ -3,7 +3,11 @@ import React from "react"
 import iconTw from '../images/twitter.png'
 import iconGi from '../images/github.png'
 import iconQi from '../images/qiita.png'
+import top from '../images/scrollTop.png'
 
+const scrollTop = () =>{
+  window.scrollTo( 0, 0 )
+}
 
 const Float = ({ userData }) => (
   <div
@@ -42,6 +46,11 @@ const Float = ({ userData }) => (
       <a href={userData.QiitaUrl} rel="noreferrer" target="_blank" aria-label="Qiita">
         <img src={iconQi} alt='画像' width="30px" height="30px"/>
       </a>
+      </div>
+      <div style={{height: `200px`}} />
+      <div className='imgDiv'>
+      <img // eslint-disable-line jsx-a11y/no-noninteractive-element-interactions
+      src={top} width="28px" height="28px" onClick={scrollTop} onKeyPress={scrollTop} alt="scroll top" />
       </div>
       <br />
     </div>

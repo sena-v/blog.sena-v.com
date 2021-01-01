@@ -4,6 +4,7 @@ html {
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -619,6 +620,6 @@ a.tag:active { color: #0D47A1; text-decoration:none; }
 }
 .imgDiv:hover {
   transition: 0.3s ;
-
+  cursor : pointer;
   background-color: #ffffff34; text-decoration:none;
 }
