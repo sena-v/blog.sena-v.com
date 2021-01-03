@@ -1,6 +1,7 @@
 import { useStaticQuery, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Ad from "./adsense"
 
 // TOPディレクトリの時だけTwitterを表示する？
 
@@ -74,7 +75,7 @@ const FloatMenu = () => {
             textAlign: `left`,
             fontFamily: "Helvetica Neue",
             borderRadius: `15px`,
-            marginRight: `20px,`
+            marginRight: `20px,`,
           }}
         >
           <p
@@ -93,8 +94,8 @@ const FloatMenu = () => {
           >
             Tags
           </p>
-          <div style={{ width: `320px`}}>
-          {data.allMarkdownRemark.group.map(node => createTags(node))}
+          <div style={{ width: `320px` }}>
+            {data.allMarkdownRemark.group.map(node => createTags(node))}
           </div>
           <p
             style={{
@@ -109,8 +110,7 @@ const FloatMenu = () => {
               fontWeight: `bold`,
               borderColor: `rgb(47, 45, 50) rgb(47, 45, 50) #ffffff rgb(47, 45, 50)`,
             }}
-          >
-          </p>
+          ></p>
           <br />
         </div>
 
@@ -131,6 +131,9 @@ const FloatMenu = () => {
             &nbsp;
           </a>
         </div>
+
+          <Ad />
+
       </div>
     </div>
   )
