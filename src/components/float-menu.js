@@ -74,7 +74,7 @@ const FloatMenu = () => {
             textAlign: `left`,
             fontFamily: "Helvetica Neue",
             borderRadius: `15px`,
-            marginRight: `20px,`
+            marginRight: `20px,`,
           }}
         >
           <p
@@ -93,8 +93,8 @@ const FloatMenu = () => {
           >
             Tags
           </p>
-          <div style={{ width: `320px`}}>
-          {data.allMarkdownRemark.group.map(node => createTags(node))}
+          <div style={{ width: `320px` }}>
+            {data.allMarkdownRemark.group.map(node => createTags(node))}
           </div>
           <p
             style={{
@@ -109,8 +109,7 @@ const FloatMenu = () => {
               fontWeight: `bold`,
               borderColor: `rgb(47, 45, 50) rgb(47, 45, 50) #ffffff rgb(47, 45, 50)`,
             }}
-          >
-          </p>
+          ></p>
           <br />
         </div>
 
@@ -131,6 +130,20 @@ const FloatMenu = () => {
             &nbsp;
           </a>
         </div>
+
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
+        <ins
+          class="adsbygoogle"
+          style={{display:`block`}}
+          data-ad-client="ca-pub-5515095500922112"
+          data-ad-slot="7682109354"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
     </div>
   )
