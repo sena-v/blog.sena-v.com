@@ -1,6 +1,7 @@
 import { useStaticQuery, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Ad from "./adsense"
 
 // TOPディレクトリの時だけTwitterを表示する？
 
@@ -131,19 +132,8 @@ const FloatMenu = () => {
           </a>
         </div>
 
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        ></script>
-        <ins
-          class="adsbygoogle"
-          style={{display:`block`}}
-          data-ad-client="ca-pub-5515095500922112"
-          data-ad-slot="7682109354"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          <Ad />
+
       </div>
     </div>
   )
