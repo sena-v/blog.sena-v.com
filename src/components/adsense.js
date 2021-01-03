@@ -22,4 +22,6 @@ const Ad = props => {
     )
 }
 
+// https://gan0803.dev/blog/2020-06-15-google-adsense
+
 export default Ad;
