@@ -184,3 +184,13 @@ JavaScriptについては用途が長い歴史の中で変わってきている�
 以上の3フェーズで無駄をなくした学習を進めることができます。<br>
 特に今自分がJavaScriptだと思っているものがいつのバージョンか？を理解することが一番重要なので<br>
 しっかりと意識しながら勉強をすすめるようにしましょう。
+
+# 追記
+-----
+<div style="margin-left:150px">
+<blockquote class="twitter-tweet" style="text-align:center"><p lang="ja" dir="ltr">- TypeScript のチュートリアルをやる<a href="https://t.co/YyaC6C8rSe">https://t.co/YyaC6C8rSe</a><br>- Next.js のチュートリアルをやる <a href="https://t.co/xMMVvzHwK5">https://t.co/xMMVvzHwK5</a><br>- <a href="https://t.co/RH5SgCGNIJ">https://t.co/RH5SgCGNIJ</a> と <a href="https://t.co/rffxTL9zui">https://t.co/rffxTL9zui</a> を読んで、面白そうなライブラリをひたすら手元で試してみる<br>- クラウドなにか一つ決めて勉強する。Firebase,AWS,GCP</p>&mdash; OSSタダ乗りおじさん (@mizchi) <a href="https://twitter.com/mizchi/status/1346313712785707009?ref_src=twsrc%5Etfw">January 5, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+@mizchiさんの投稿にもありましたが、やはり大枠はnodeからReact等が一番良さそうです。<br>
+といっても「基本を身に着けてからReactをうまく扱えるか？」の部分が最初の難関となるので<br>
+ネット上の講座等も<u>ES6以降が学べるか精査した上で</u>身につけると最短速度で学習が進むと思います。
