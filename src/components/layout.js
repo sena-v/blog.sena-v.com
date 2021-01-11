@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import "prismjs/themes/prism-tomorrow.css"
 import "./layout.css"
 import Header from "./header"
 import Footer from "./footer"
